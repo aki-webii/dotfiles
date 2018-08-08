@@ -1,0 +1,109 @@
+# screen -ls    : list
+# screen -D -RR : attach all
+# screen -r     : attach
+# screen -p <N> : attach Nth
+
+# ^?     : show help
+# ^c     : create new screen
+# ^d     : detach
+# ^n     : move to next screen
+# ^p     : move to previous screen
+# ^S     : split window
+# ^<TAB> : move to next window
+# ^X     : delete window
+# ^A     : set session name
+# ^H     : loggion on/off
+# ^x     : lock screen
+
+startup_message off
+autodetach on
+
+shell -$SHELL
+
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+
+# bell_msg "^G"
+vbell off
+defscrollback 10000
+
+# caption always "[%Y/%m/%d %c]%h"
+# hardstatus alwayslastline "%-w%{=br}%n %t%{-}%+w"
+
+#caption always "%?%F%{= bW}%:%{= wk}%?%2n%f%07=%t%="  
+#hardstatus alwayslastline "%{= Wb}[%m/%d %02c:%s]%016=%{= WK}%-w%50>%{= bW}%n %t%{-}%+w%-0< %="  
+
+#caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d %{=b wm}%c"
+caption always "%{= bW}%{= wk}%-w%50>%{= Wb}%n %t%{-}%+w%-0< %="
+
+
+
+multiuser on
+escape ^z^z
+
+
+# M-up down left right
+bindkey \033^[OD prev
+bindkey \033^[OC next
+#bindkey \033^[OA screen
+#bindkey \033^[OB select 0
+bindkey \033^[OA copy
+bindkey \033^[OB screen
+# up down left rigth
+bindkey ^[OD prev
+bindkey ^[OC next
+#bindkey ^[OA screen 
+#bindkey ^[OB select 0
+bindkey ^[OA copy
+bindkey ^[OB screen
+
+bind u encoding utf-8
+bind e encoding euc
+bind s encoding sjis
+# 
+bind l stuff 'for h in `cat hostlist` ;do screen -t $h  ssh $h; done'
+#bind s stuff 'H= screen -t $H  ;ssh $H'
+#bindkey -t ;lab stuff  'for h in ` for i in {1..14} ; do  printf "lab-wisact1%02dzd " $i ;done ` ;do screen -t $h  ssh $h; done'
+#bindkey -t ;stg stuff  'for h in ` for i in {1..14} ; do  printf "stg-wisact1%02dzd " $i ;done ` ;do screen -t $h  ssh $h; done'
+#bindkey -t ;pro stuff  ''
+# M-0~9
+bindkey \0330 select 0
+bindkey \0331 select 1
+bindkey \0332 select 2
+bindkey \0333 select 3
+bindkey \0334 select 4
+bindkey \0335 select 5
+bindkey \0336 select 6
+bindkey \0337 select 7
+bindkey \0338 select 8
+bindkey \0339 select 9
+
+# Emacs like
+bind k kill
+bind ' ' copy
+bind y paste .
+bind b windowlist
+bind 1 remove
+bind 2 split
+bind o focus
+bind c quit
+# markkeys "^B=^V:^F=\033v:h=^B:l=^F:$=^E:\^=^A:B=\033b:E=\033f:g=\033<:G=\033>"
+
+# copy mode key
+# v       : scroll-up
+# C-v     : scroll-down
+# C-f     : forward-char
+# C-b     : backward-char
+# C-p     : previous-char
+# C-n     : next-line
+# C-a     : move-end-of-line
+# C-e     : move-beginning-of-line
+# f       : forward-word
+# b       : backward-word
+# >       : end-of-buffer
+# <       : beginning-of-buffer
+# <space> : set-mark-command
+# <space> : kill-ring-save
+markkeys "^F=^V:^B=v:h=^B:l=^F:$=^E:\^=^A:B=b:E=f:g=<:G=>"
+markkeys "@=^ "

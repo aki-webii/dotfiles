@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: var_dump_exit
+# key: vde
+# --
+var_dump($0);exit;

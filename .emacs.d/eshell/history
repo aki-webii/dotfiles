@@ -1,0 +1,77 @@
+rails console
+rails console
+rails console
+rails console
+rails console
+rails console
+rails console
+rails console
+bc
+git diff
+reset
+reset
+git diff
+git diff
+git diff EDITOR=
+git diff --help
+git log
+git diff
+git diff | less
+git diff 
+git status ..
+git add app
+git status ..
+git status ..
+git diff app/assets/stylesheets/device/themes/bargain_shops.scss
+git diff app/assets/stylesheets/device/themes/bargain_shops.scss
+cat fish_dict.csv | sed '/\([^,]\+\),\(.*\)/'
+uniq fish_dict.csv 
+uniq fish_dict.csv  > fish_dict.csv
+grep 'org' fish_dict.csv fish_dict2.csv
+เฅ…เฅ…เฅ…เฅ…เค•
+grep 'org' fish_dict.csv > fish_dict2.csv
+grep 'org' fish_dict.csv
+เฅ…“เฅ…เคเฅ…เฅ…เคเฅ…เคเฅ…เคเฅ…เคเฅ…เฅ…เคเฅ…เคเฅ…เคเฅเคเฅ…เฅ…“เฅ…เคเฅ…เฅ…เคเฅ…เคเฅ…เคเฅ…เคเฅ…เฅ…เคเฅ…เคเฅ…เคเฅเคเฅ…
+grep 'org' fish_dict.csv
+grep 'org' fish_dict.csv
+grep -v 'org' fish_dict.csv
+grep -v 'org' fish_dict.csv
+sort fish_dict2.csv
+sort fish_dict2.csv > fish_dict2.csv
+เฅ…เคเฅ…เค—เฅ…เฅ…เคเฅ…เคเฅ…เค…, เฅเค—…เฅ เฅเค“,เฅ…เคเฅ…เค—เฅ…,เฅ…เค•เฅ…เคเฅ…เคเฅ…เคเฅ…เฅ…เคเฅ…เคเฅ…เค…
+sort fish_dict2.csv
+fish_dict2.csv  | sort 
+cat fish_dict2.csv  | sort 
+export LC_ALL=C
+cat fish_dict2.csv  | sort 
+เฅ…เคเฅ…เฅ…เค,เฅ…เคเฅ…เคเฅ…เคเฅ…เฅ…เค,เฅ…เคเฅ…เค•เฅ…เคเฅ…เฅ…เค,เฅ…เค’เฅ…เคเฅ…เคเฅ…เฅ…เค,เฅ…เคเฅ…เคเฅ…เคเฅ…เฅ…เค,เฅเคเฅเคเค—,เคผเค
+cat fish_dict2.csv  | sort 
+cat fish_dict2.csv  | sort  | wc
+cat fish_dict2.csv  | sort  | wc -l
+wc fish_dict2.csv
+export LC_ALL=ja_JP.utf-8
+cat fish_dict2.csv  | sort  | wc -l
+wc fish_dict2.csv
+cat fish_dict2.csv  wc -l
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv 
+เฅ…เค…เฅ…เฅ…เคเฅ…เฅ…เฅ…เค…, เฅเค•เฅ…เฅ
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv 
+เฅ…เค’เฅ…เคเฅ…เค—เฅ…เค, เฅเคเคผเคเค,เฅ…เคเคผเค,,เฅ…เคเฅ…เฅ…เค—เฅ…เค,เฅ…เค—เฅ…เค’เฅ…เคเฅ…เคเฅ…เค
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv  | wc -l
+cat fish_dict2.csv  | wc -l
+wc fish_dict2.csv
+139     352    7169 fish_dict2.csv
+wc -l fish_dict2.csv
+wc -l fish_dict2.csv
+wc -l fish_dict2.csv
+cat fish_dict2.csv | wc -l
+cat fish_dict2.csv | wc -l
+diff ~/Downloads/master.csv /tmp/after.csv 
+quit
+exit
