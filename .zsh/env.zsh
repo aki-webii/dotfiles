@@ -32,3 +32,6 @@ export PATH=$PATH:~/Library/Python/2.7/bin
 # direnv
 export EDITOR="/usr/local/bin/emacsclient -t"
 eval "$(direnv hook zsh)"
+
+# vscode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

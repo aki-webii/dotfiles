@@ -21,3 +21,5 @@ alias grep='command grep --color'
 alias e='/usr/local/bin/emacsclient -t'
 
 alias reload="source ~/.zshrc"
+
+alias fscli='faas-cli'
