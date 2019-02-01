@@ -115,11 +115,6 @@ bind refs    <Esc>u ?sh -c "git checkout %(branch) && git pull && git checkout -
 # P で remote への push
 bind generic P      ?git push -u %(remote) %(repo:head)
 
-# C で commit (refs での C は checkout, main での C は cherry-pick だが上書きする)
-bind generic C      !git commit
-bind refs    C      !git commit
-bind main    C      !git commit
-
 # Alt-c で commit --allow-empty
 bind generic <Esc>c !git commit --allow-empty
 
