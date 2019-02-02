@@ -194,7 +194,7 @@ bind tree    `      @bash -c "echo -n '%(file)' | pbcopy"
 bind blob    `      @bash -c "echo -n '%(file)' | pbcopy"
 
 # ! で revert
-bind main    !      ?git revert %(com
+bind main    !      ?git revert %(commit)
 
 # K で cherry-pick (default: 'C')
 bind main    K      ?git cherry-pick %(commit)
