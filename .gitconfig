@@ -1,5 +1,8 @@
+[user]
+  name = 'aki-webii'
+  email = 'c.mikamichel@gmail.com'
+
 [core]
-  editor = "/usr/local/bin/emacsclient -t" --alternate-editor /usr/local/bin/emacs
   excludesfile = ~/.gitignore
 
 [alias]
@@ -19,10 +22,8 @@
   ln = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --name-status
   lp = log --oneline -n 20 -p
   log-all = log --graph --all --color --date=short --pretty=format:'%x09%Cgreen%h %cd %Cblue%cn%x09%Creset%s %Cred%d%Creset'
-  fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 
-  sweep-branch = !git branch --delete $(git branch --merged master | grep -v '^*\\|  master$')
-#  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  sweep-branch = !git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d
 
 [color]
   ui = true
