@@ -6,9 +6,6 @@ path=(~/bin ~/.cabal/bin ~/homebrew/bin $path)
 
 export PATH="/usr/local/bin:$PATH"
 
-# nodebrew
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
-
 # composer global
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
@@ -27,7 +24,7 @@ fi
 export PATH=$PATH:/Users/mikami/.config/yarn/global
 
 # AWS Elastic Beanstalk CLI - eb(Python)
-export PATH=$PATH:~/Library/Python/2.7/bin
+export PATH=$PATH:~/Library/Python/3.7/bin
 
 # direnv
 export EDITOR="/usr/local/bin/emacsclient -t"
@@ -35,3 +32,15 @@ eval "$(direnv hook zsh)"
 
 # vscode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# use openssl instead of libressl
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# for finding openssl resources
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+
+# anyenv
+eval "$(anyenv init -)"
+
+# postgresql
+export PGDATA='/usr/local/var/postgres'

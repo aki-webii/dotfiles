@@ -1,0 +1,6 @@
+new-window
+
+split-window -h -c "#{pane_current_path}"
+select-pane -L
+split-window -v -c "#{pane_current_path}"
+select-pane -R
