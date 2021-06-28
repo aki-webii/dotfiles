@@ -42,7 +42,8 @@
 [fetch]
   prune = true
 
-
+[credential]
+  helper = osxkeychain
 
 ### git tips
 
@@ -55,4 +56,7 @@
 #
 ## delete remote branch
 # git push origin :refs/heads/<branch_name>
-
+#
+## Checkout specific file from specific commit
+# git checkout [commit hash] [file path]
+#
