@@ -1,0 +1,70 @@
+[user]
+  name = 'aki-webii'
+  email = 'c.mikamichel@gmail.com'
+
+[alias]
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  b = branch -a
+  bd = branch -d
+  c = commit
+  cm = commit -m
+  co = checkout
+  d = diff
+  f = fetch
+  s = status --short --branch
+  ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
+
+  l = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+  ll = log --stat --abbrev-commit
+  ln = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --name-status
+  lp = log --oneline -n 20 -p
+  log-all = log --graph --all --color --date=short --pretty=format:'%x09%Cgreen%h %cd %Cblue%cn%x09%Creset%s %Cred%d%Creset'
+
+  sweep-branch = !git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d
+
+[color]
+  ui = true
+
+[pager]
+  log = "$(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight" | less
+  show = "$(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight" | less
+  diff = "$(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight" | less
+
+[diff]
+  compactionHeuristic = true
+
+[interactive]
+  diffFilter = "$(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight"
+
+[diff]
+    tool = code
+
+[difftool "code"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[difftool]
+  prompt = false
+
+[fetch]
+  prune = true
+
+[credential]
+  helper = osxkeychain
+
+### git tips
+
+## Unable to delete remote tag/branch, because there're both tag/branch which has same name.
+## Error will be shown as below.
+# error: dst refspec <tag_name> matches more than one.
+#
+## delete remote tag
+# git push origin :refs/tags/<tag_name>
+#
+## delete remote branch
+# git push origin :refs/heads/<branch_name>
+#
+## Checkout specific file from specific commit
+# git checkout [commit hash] [file path]
+#
+[init]
+	defaultBranch = main

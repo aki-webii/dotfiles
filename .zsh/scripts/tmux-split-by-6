@@ -1,0 +1,9 @@
+# 現在のタブを6つのpaneにsplitする
+split-window -h -c "#{pane_current_path}"
+select-pane -L
+split-window -v -c "#{pane_current_path}"
+split-window -v -c "#{pane_current_path}"
+select-pane -D
+split-window -v -c "#{pane_current_path}"
+select-pane -R
+split-window -v -c "#{pane_current_path}"

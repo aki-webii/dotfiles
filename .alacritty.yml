@@ -1,0 +1,4 @@
+import:
+  - ~/.alacritty/font.yml
+  - ~/.alacritty/color.yml
+  - ~/.alacritty/keyBindings.yml
